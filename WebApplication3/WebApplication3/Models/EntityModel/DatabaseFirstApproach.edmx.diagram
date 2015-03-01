@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ad600159081c4921a03f9a257f7578ea" Name="Diagram1">
+        <EntityTypeShape EntityType="ASPDatabaseFirstModel.Designation" Width="1.5" PointX="4.5" PointY="0.5" />
+        <EntityTypeShape EntityType="ASPDatabaseFirstModel.Employee" Width="1.5" PointX="3" PointY="3.375" />
+        <EntityTypeShape EntityType="ASPDatabaseFirstModel.Person" Width="1.5" PointX="0.75" PointY="3.5" />
+        <EntityTypeShape EntityType="ASPDatabaseFirstModel.Student" Width="1.5" PointX="3" PointY="7" />
+        <EntityTypeShape EntityType="ASPDatabaseFirstModel.StudentEmployee" Width="1.5" PointX="5.25" PointY="5.125" />
+        <AssociationConnector Association="ASPDatabaseFirstModel.FK_Employee_Designation" />
+        <AssociationConnector Association="ASPDatabaseFirstModel.FK_Employee_Person" />
+        <AssociationConnector Association="ASPDatabaseFirstModel.FK_StudentEmployee_Employee" />
+        <AssociationConnector Association="ASPDatabaseFirstModel.FK_Student_Person" />
+        <AssociationConnector Association="ASPDatabaseFirstModel.FK_StudentEmployee_Student" />
+        <EntityTypeShape EntityType="ASPDatabaseFirstModel.ViewEmployee" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="ASPDatabaseFirstModel.NewTable" Width="1.5" PointX="10.125" PointY="3.625" />
+        <AssociationConnector Association="ASPDatabaseFirstModel.FK_NewTable_Employee" />
+        <AssociationConnector Association="ASPDatabaseFirstModel.FK_NewTable_Person" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

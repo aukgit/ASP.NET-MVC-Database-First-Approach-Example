@@ -1,0 +1,105 @@
+E:\Working\Developers Organism\Video Tutorials\Personal\ASP.NET Group\5.1 Databafirst and Indentity\01. DatabaseFirst Beyond the Basics\WebApplication3\WebApplication3\bin\WebApplication3.dll.config
+E:\Working\Developers Organism\Video Tutorials\Personal\ASP.NET Group\5.1 Databafirst and Indentity\01. DatabaseFirst Beyond the Basics\WebApplication3\WebApplication3\bin\WebApplication3.dll
+E:\Working\Developers Organism\Video Tutorials\Personal\ASP.NET Group\5.1 Databafirst and Indentity\01. DatabaseFirst Beyond the Basics\WebApplication3\WebApplication3\bin\WebApplication3.pdb
+E:\Working\Developers Organism\Video Tutorials\Personal\ASP.NET Group\5.1 Databafirst and Indentity\01. DatabaseFirst Beyond the Basics\WebApplication3\WebApplication3\bin\Antlr3.Runtime.dll
+E:\Working\Developers Organism\Video Tutorials\Personal\ASP.NET Group\5.1 Databafirst and Indentity\01. DatabaseFirst Beyond the Basics\WebApplication3\WebApplication3\bin\EntityFramework.dll
+E:\Working\Developers Organism\Video Tutorials\Personal\ASP.NET Group\5.1 Databafirst and Indentity\01. DatabaseFirst Beyond the Basics\WebApplication3\WebApplication3\bin\EntityFramework.SqlServer.dll
+E:\Working\Developers Organism\Video Tutorials\Personal\ASP.NET Group\5.1 Databafirst and Indentity\01. DatabaseFirst Beyond the Basics\WebApplication3\WebApplication3\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Working\Developers Organism\Video Tutorials\Personal\ASP.NET Group\5.1 Databafirst and Indentity\01. DatabaseFirst Beyond the Basics\WebApplication3\WebApplication3\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Working\Developers Organism\Video Tutorials\Personal\ASP.NET Group\5.1 Databafirst and Indentity\01. DatabaseFirst Beyond the Basics\WebApplication3\WebApplication3\bin\Microsoft.Owin.dll
+E:\Working\Developers Organism\Video Tutorials\Personal\ASP.NET Group\5.1 Databafirst and Indentity\01. DatabaseFirst Beyond the Basics\WebApplication3\WebApplication3\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Working\Developers Organism\Video Tutorials\Personal\ASP.NET Group\5.1 Databafirst and Indentity\01. DatabaseFirst Beyond the Basics\WebApplication3\WebApplication3\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Working\Developers Organism\Video Tutorials\Personal\ASP.NET Group\5.1 Databafirst and Indentity\01. DatabaseFirst Beyond the Basics\WebApplication3\WebApplication3\bin\Microsoft.Owin.Security.dll
+E:\Working\Developers Organism\Video Tutorials\Personal\ASP.NET Group\5.1 Databafirst and Indentity\01. DatabaseFirst Beyond the Basics\WebApplication3\WebApplication3\bin\Microsoft.Owin.Security.Facebook.dll
+E:\Working\Developers Organism\Video Tutorials\Personal\ASP.NET Group\5.1 Databafirst and Indentity\01. DatabaseFirst Beyond the Basics\WebApplication3\WebApplication3\bin\Microsoft.Owin.Security.Google.dll
+E:\Working\Developers Organism\Video Tutorials\Personal\ASP.NET Group\5.1 Databafirst and Indentity\01. DatabaseFirst Beyond the Basics\WebApplication3\WebApplication3\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Working\Developers Organism\Video Tutorials\Personal\ASP.NET Group\5.1 Databafirst and Indentity\01. DatabaseFirst Beyond the Basics\WebApplication3\WebApplication3\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Working\Developers Organism\Video Tutorials\Personal\ASP.NET Group\5.1 Databafirst and Indentity\01. DatabaseFirst Beyond the Basics\WebApplication3\WebApplication3\bin\Microsoft.Web.Infrastructure.dll
+E:\Working\Developers Organism\Video Tutorials\Personal\ASP.NET Group\5.1 Databafirst and Indentity\01. DatabaseFirst Beyond the Basics\WebApplication3\WebApplication3\bin\Newtonsoft.Json.dll
+E:\Working\Developers Organism\Video Tutorials\Personal\ASP.NET Group\5.1 Databafirst and Indentity\01. DatabaseFirst Beyond the Basics\WebApplication3\WebApplication3\bin\Owin.dll
+E:\Working\Developers Organism\Video Tutorials\Personal\ASP.NET Group\5.1 Databafirst and Indentity\01. DatabaseFirst Beyond the Basics\WebApplication3\WebApplication3\bin\System.Web.Helpers.dll
+E:\Working\Developers Organism\Video Tutorials\Personal\ASP.NET Group\5.1 Databafirst and Indentity\01. DatabaseFirst Beyond the Basics\WebApplication3\WebApplication3\bin\System.Web.Mvc.dll
+E:\Working\Developers Organism\Video Tutorials\Personal\ASP.NET Group\5.1 Databafirst and Indentity\01. DatabaseFirst Beyond the Basics\WebApplication3\WebApplication3\bin\System.Web.Optimization.dll
+E:\Working\Developers Organism\Video Tutorials\Personal\ASP.NET Group\5.1 Databafirst and Indentity\01. DatabaseFirst Beyond the Basics\WebApplication3\WebApplication3\bin\System.Web.Razor.dll
+E:\Working\Developers Organism\Video Tutorials\Personal\ASP.NET Group\5.1 Databafirst and Indentity\01. DatabaseFirst Beyond the Basics\WebApplication3\WebApplication3\bin\System.Web.WebPages.Deployment.dll
+E:\Working\Developers Organism\Video Tutorials\Personal\ASP.NET Group\5.1 Databafirst and Indentity\01. DatabaseFirst Beyond the Basics\WebApplication3\WebApplication3\bin\System.Web.WebPages.dll
+E:\Working\Developers Organism\Video Tutorials\Personal\ASP.NET Group\5.1 Databafirst and Indentity\01. DatabaseFirst Beyond the Basics\WebApplication3\WebApplication3\bin\System.Web.WebPages.Razor.dll
+E:\Working\Developers Organism\Video Tutorials\Personal\ASP.NET Group\5.1 Databafirst and Indentity\01. DatabaseFirst Beyond the Basics\WebApplication3\WebApplication3\bin\WebGrease.dll
+E:\Working\Developers Organism\Video Tutorials\Personal\ASP.NET Group\5.1 Databafirst and Indentity\01. DatabaseFirst Beyond the Basics\WebApplication3\WebApplication3\bin\System.Web.Helpers.xml
+E:\Working\Developers Organism\Video Tutorials\Personal\ASP.NET Group\5.1 Databafirst and Indentity\01. DatabaseFirst Beyond the Basics\WebApplication3\WebApplication3\bin\System.Web.Mvc.xml
+E:\Working\Developers Organism\Video Tutorials\Personal\ASP.NET Group\5.1 Databafirst and Indentity\01. DatabaseFirst Beyond the Basics\WebApplication3\WebApplication3\bin\System.Web.Optimization.xml
+E:\Working\Developers Organism\Video Tutorials\Personal\ASP.NET Group\5.1 Databafirst and Indentity\01. DatabaseFirst Beyond the Basics\WebApplication3\WebApplication3\bin\System.Web.Razor.xml
+E:\Working\Developers Organism\Video Tutorials\Personal\ASP.NET Group\5.1 Databafirst and Indentity\01. DatabaseFirst Beyond the Basics\WebApplication3\WebApplication3\bin\System.Web.WebPages.xml
+E:\Working\Developers Organism\Video Tutorials\Personal\ASP.NET Group\5.1 Databafirst and Indentity\01. DatabaseFirst Beyond the Basics\WebApplication3\WebApplication3\bin\System.Web.WebPages.Deployment.xml
+E:\Working\Developers Organism\Video Tutorials\Personal\ASP.NET Group\5.1 Databafirst and Indentity\01. DatabaseFirst Beyond the Basics\WebApplication3\WebApplication3\bin\System.Web.WebPages.Razor.xml
+E:\Working\Developers Organism\Video Tutorials\Personal\ASP.NET Group\5.1 Databafirst and Indentity\01. DatabaseFirst Beyond the Basics\WebApplication3\WebApplication3\bin\Antlr3.Runtime.pdb
+E:\Working\Developers Organism\Video Tutorials\Personal\ASP.NET Group\5.1 Databafirst and Indentity\01. DatabaseFirst Beyond the Basics\WebApplication3\WebApplication3\bin\Newtonsoft.Json.xml
+E:\Working\Developers Organism\Video Tutorials\Personal\ASP.NET Group\5.1 Databafirst and Indentity\01. DatabaseFirst Beyond the Basics\WebApplication3\WebApplication3\bin\EntityFramework.xml
+E:\Working\Developers Organism\Video Tutorials\Personal\ASP.NET Group\5.1 Databafirst and Indentity\01. DatabaseFirst Beyond the Basics\WebApplication3\WebApplication3\bin\EntityFramework.SqlServer.xml
+E:\Working\Developers Organism\Video Tutorials\Personal\ASP.NET Group\5.1 Databafirst and Indentity\01. DatabaseFirst Beyond the Basics\WebApplication3\WebApplication3\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Working\Developers Organism\Video Tutorials\Personal\ASP.NET Group\5.1 Databafirst and Indentity\01. DatabaseFirst Beyond the Basics\WebApplication3\WebApplication3\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Working\Developers Organism\Video Tutorials\Personal\ASP.NET Group\5.1 Databafirst and Indentity\01. DatabaseFirst Beyond the Basics\WebApplication3\WebApplication3\bin\Microsoft.Owin.xml
+E:\Working\Developers Organism\Video Tutorials\Personal\ASP.NET Group\5.1 Databafirst and Indentity\01. DatabaseFirst Beyond the Basics\WebApplication3\WebApplication3\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Working\Developers Organism\Video Tutorials\Personal\ASP.NET Group\5.1 Databafirst and Indentity\01. DatabaseFirst Beyond the Basics\WebApplication3\WebApplication3\bin\Microsoft.Owin.Security.xml
+E:\Working\Developers Organism\Video Tutorials\Personal\ASP.NET Group\5.1 Databafirst and Indentity\01. DatabaseFirst Beyond the Basics\WebApplication3\WebApplication3\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Working\Developers Organism\Video Tutorials\Personal\ASP.NET Group\5.1 Databafirst and Indentity\01. DatabaseFirst Beyond the Basics\WebApplication3\WebApplication3\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Working\Developers Organism\Video Tutorials\Personal\ASP.NET Group\5.1 Databafirst and Indentity\01. DatabaseFirst Beyond the Basics\WebApplication3\WebApplication3\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Working\Developers Organism\Video Tutorials\Personal\ASP.NET Group\5.1 Databafirst and Indentity\01. DatabaseFirst Beyond the Basics\WebApplication3\WebApplication3\bin\Microsoft.Owin.Security.Google.xml
+E:\Working\Developers Organism\Video Tutorials\Personal\ASP.NET Group\5.1 Databafirst and Indentity\01. DatabaseFirst Beyond the Basics\WebApplication3\WebApplication3\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Working\Developers Organism\Video Tutorials\Personal\ASP.NET Group\5.1 Databafirst and Indentity\01. DatabaseFirst Beyond the Basics\WebApplication3\WebApplication3\obj\Debug\WebApplication3.dll
+E:\Working\Developers Organism\Video Tutorials\Personal\ASP.NET Group\5.1 Databafirst and Indentity\01. DatabaseFirst Beyond the Basics\WebApplication3\WebApplication3\obj\Debug\WebApplication3.pdb
+E:\WebApplication3\WebApplication3\bin\WebApplication3.dll.config
+E:\WebApplication3\WebApplication3\bin\WebApplication3.dll
+E:\WebApplication3\WebApplication3\bin\WebApplication3.pdb
+E:\WebApplication3\WebApplication3\bin\Antlr3.Runtime.dll
+E:\WebApplication3\WebApplication3\bin\EntityFramework.dll
+E:\WebApplication3\WebApplication3\bin\EntityFramework.SqlServer.dll
+E:\WebApplication3\WebApplication3\bin\Microsoft.AspNet.Identity.Core.dll
+E:\WebApplication3\WebApplication3\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\WebApplication3\WebApplication3\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\WebApplication3\WebApplication3\bin\Microsoft.Owin.dll
+E:\WebApplication3\WebApplication3\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\WebApplication3\WebApplication3\bin\Microsoft.Owin.Security.Cookies.dll
+E:\WebApplication3\WebApplication3\bin\Microsoft.Owin.Security.dll
+E:\WebApplication3\WebApplication3\bin\Microsoft.Owin.Security.Facebook.dll
+E:\WebApplication3\WebApplication3\bin\Microsoft.Owin.Security.Google.dll
+E:\WebApplication3\WebApplication3\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\WebApplication3\WebApplication3\bin\Microsoft.Owin.Security.OAuth.dll
+E:\WebApplication3\WebApplication3\bin\Microsoft.Owin.Security.Twitter.dll
+E:\WebApplication3\WebApplication3\bin\Microsoft.Web.Infrastructure.dll
+E:\WebApplication3\WebApplication3\bin\Newtonsoft.Json.dll
+E:\WebApplication3\WebApplication3\bin\Owin.dll
+E:\WebApplication3\WebApplication3\bin\System.Web.Helpers.dll
+E:\WebApplication3\WebApplication3\bin\System.Web.Mvc.dll
+E:\WebApplication3\WebApplication3\bin\System.Web.Optimization.dll
+E:\WebApplication3\WebApplication3\bin\System.Web.Razor.dll
+E:\WebApplication3\WebApplication3\bin\System.Web.WebPages.Deployment.dll
+E:\WebApplication3\WebApplication3\bin\System.Web.WebPages.dll
+E:\WebApplication3\WebApplication3\bin\System.Web.WebPages.Razor.dll
+E:\WebApplication3\WebApplication3\bin\WebGrease.dll
+E:\WebApplication3\WebApplication3\bin\System.Web.Helpers.xml
+E:\WebApplication3\WebApplication3\bin\System.Web.Mvc.xml
+E:\WebApplication3\WebApplication3\bin\System.Web.Optimization.xml
+E:\WebApplication3\WebApplication3\bin\System.Web.Razor.xml
+E:\WebApplication3\WebApplication3\bin\System.Web.WebPages.xml
+E:\WebApplication3\WebApplication3\bin\System.Web.WebPages.Deployment.xml
+E:\WebApplication3\WebApplication3\bin\System.Web.WebPages.Razor.xml
+E:\WebApplication3\WebApplication3\bin\Antlr3.Runtime.pdb
+E:\WebApplication3\WebApplication3\bin\Newtonsoft.Json.xml
+E:\WebApplication3\WebApplication3\bin\EntityFramework.xml
+E:\WebApplication3\WebApplication3\bin\EntityFramework.SqlServer.xml
+E:\WebApplication3\WebApplication3\bin\Microsoft.AspNet.Identity.Core.xml
+E:\WebApplication3\WebApplication3\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\WebApplication3\WebApplication3\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\WebApplication3\WebApplication3\bin\Microsoft.Owin.xml
+E:\WebApplication3\WebApplication3\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\WebApplication3\WebApplication3\bin\Microsoft.Owin.Security.xml
+E:\WebApplication3\WebApplication3\bin\Microsoft.Owin.Security.Facebook.xml
+E:\WebApplication3\WebApplication3\bin\Microsoft.Owin.Security.Cookies.xml
+E:\WebApplication3\WebApplication3\bin\Microsoft.Owin.Security.OAuth.xml
+E:\WebApplication3\WebApplication3\bin\Microsoft.Owin.Security.Google.xml
+E:\WebApplication3\WebApplication3\bin\Microsoft.Owin.Security.Twitter.xml
+E:\WebApplication3\WebApplication3\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\WebApplication3\WebApplication3\obj\Debug\WebApplication3.dll
+E:\WebApplication3\WebApplication3\obj\Debug\WebApplication3.pdb
+E:\WebApplication3\WebApplication3\obj\Debug\WebApplication3.csprojResolveAssemblyReference.cache

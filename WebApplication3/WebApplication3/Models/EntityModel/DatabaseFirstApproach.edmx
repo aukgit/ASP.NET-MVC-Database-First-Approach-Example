@@ -1,0 +1,579 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ASPDatabaseFirstModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Designation">
+          <Key>
+            <PropertyRef Name="DesignationID" />
+          </Key>
+          <Property Name="DesignationID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DesignationName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Salary" Type="decimal" Precision="14" Scale="4" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Name="EmployeeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PersonID" Type="int" Nullable="false" />
+          <Property Name="DesignationID" Type="tinyint" Nullable="false" />
+          <Property Name="IsAdmin" Type="bit" Nullable="false" />
+          <Property Name="IsTeachingAssistant" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="NewTable">
+          <Key>
+            <PropertyRef Name="NewTableID" />
+          </Key>
+          <Property Name="NewTableID" Type="tinyint" Nullable="false" />
+          <Property Name="PersonID" Type="int" Nullable="false" />
+          <Property Name="EmployeeID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Person">
+          <Key>
+            <PropertyRef Name="PersonID" />
+          </Key>
+          <Property Name="PersonID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="LastName" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="DateOfBirth" Type="date" Nullable="false" />
+          <Property Name="Address" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Student">
+          <Key>
+            <PropertyRef Name="StudentID" />
+          </Key>
+          <Property Name="StudentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PersonID" Type="int" Nullable="false" />
+          <Property Name="CGPA" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="StudentEmployee">
+          <Key>
+            <PropertyRef Name="StudentEmployeeID" />
+          </Key>
+          <Property Name="StudentEmployeeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StudentID" Type="int" Nullable="false" />
+          <Property Name="EmployeeID" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'E:\WEBAPPLICATION3\WEBAPPLICATION3\APP_DATA\ASPDATABASEFIRST.MDF.dbo.ViewEmployee' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="ViewEmployee">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+            <PropertyRef Name="PersonID" />
+            <PropertyRef Name="DesignationID" />
+            <PropertyRef Name="IsAdmin" />
+            <PropertyRef Name="IsTeachingAssistant" />
+            <PropertyRef Name="LastName" />
+            <PropertyRef Name="FirstName" />
+            <PropertyRef Name="DateOfBirth" />
+            <PropertyRef Name="DesignationName" />
+            <PropertyRef Name="Salary" />
+          </Key>
+          <Property Name="EmployeeID" Type="int" Nullable="false" />
+          <Property Name="PersonID" Type="int" Nullable="false" />
+          <Property Name="DesignationID" Type="tinyint" Nullable="false" />
+          <Property Name="IsAdmin" Type="bit" Nullable="false" />
+          <Property Name="IsTeachingAssistant" Type="bit" Nullable="false" />
+          <Property Name="LastName" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="FirstName" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="DateOfBirth" Type="date" Nullable="false" />
+          <Property Name="Address" Type="varchar" MaxLength="50" />
+          <Property Name="DesignationName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Salary" Type="decimal" Precision="14" Scale="4" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Employee_Designation">
+          <End Role="Designation" Type="Self.Designation" Multiplicity="1" />
+          <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Designation">
+              <PropertyRef Name="DesignationID" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="DesignationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_Person">
+          <End Role="Person" Type="Self.Person" Multiplicity="1" />
+          <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="PersonID" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="PersonID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NewTable_Employee">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+          <End Role="NewTable" Type="Self.NewTable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="NewTable">
+              <PropertyRef Name="EmployeeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NewTable_Person">
+          <End Role="Person" Type="Self.Person" Multiplicity="1" />
+          <End Role="NewTable" Type="Self.NewTable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="PersonID" />
+            </Principal>
+            <Dependent Role="NewTable">
+              <PropertyRef Name="PersonID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Student_Person">
+          <End Role="Person" Type="Self.Person" Multiplicity="1" />
+          <End Role="Student" Type="Self.Student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="PersonID" />
+            </Principal>
+            <Dependent Role="Student">
+              <PropertyRef Name="PersonID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudentEmployee_Employee">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+          <End Role="StudentEmployee" Type="Self.StudentEmployee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="StudentEmployee">
+              <PropertyRef Name="EmployeeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudentEmployee_Student">
+          <End Role="Student" Type="Self.Student" Multiplicity="1" />
+          <End Role="StudentEmployee" Type="Self.StudentEmployee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="StudentID" />
+            </Principal>
+            <Dependent Role="StudentEmployee">
+              <PropertyRef Name="StudentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="TestEmployeesViews" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="SearchForEmployee" Type="varchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="ASPDatabaseFirstModelStoreContainer">
+          <EntitySet Name="Designation" EntityType="Self.Designation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NewTable" EntityType="Self.NewTable" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Person" EntityType="Self.Person" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="StudentEmployee" EntityType="Self.StudentEmployee" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ViewEmployee" EntityType="Self.ViewEmployee" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ViewEmployee].[EmployeeID] AS [EmployeeID], 
+    [ViewEmployee].[PersonID] AS [PersonID], 
+    [ViewEmployee].[DesignationID] AS [DesignationID], 
+    [ViewEmployee].[IsAdmin] AS [IsAdmin], 
+    [ViewEmployee].[IsTeachingAssistant] AS [IsTeachingAssistant], 
+    [ViewEmployee].[LastName] AS [LastName], 
+    [ViewEmployee].[FirstName] AS [FirstName], 
+    [ViewEmployee].[DateOfBirth] AS [DateOfBirth], 
+    [ViewEmployee].[Address] AS [Address], 
+    [ViewEmployee].[DesignationName] AS [DesignationName], 
+    [ViewEmployee].[Salary] AS [Salary]
+    FROM [dbo].[ViewEmployee] AS [ViewEmployee]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_Employee_Designation" Association="Self.FK_Employee_Designation">
+            <End Role="Designation" EntitySet="Designation" />
+            <End Role="Employee" EntitySet="Employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_Person" Association="Self.FK_Employee_Person">
+            <End Role="Person" EntitySet="Person" />
+            <End Role="Employee" EntitySet="Employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NewTable_Employee" Association="Self.FK_NewTable_Employee">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="NewTable" EntitySet="NewTable" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NewTable_Person" Association="Self.FK_NewTable_Person">
+            <End Role="Person" EntitySet="Person" />
+            <End Role="NewTable" EntitySet="NewTable" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Student_Person" Association="Self.FK_Student_Person">
+            <End Role="Person" EntitySet="Person" />
+            <End Role="Student" EntitySet="Student" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudentEmployee_Employee" Association="Self.FK_StudentEmployee_Employee">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="StudentEmployee" EntitySet="StudentEmployee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudentEmployee_Student" Association="Self.FK_StudentEmployee_Student">
+            <End Role="Student" EntitySet="Student" />
+            <End Role="StudentEmployee" EntitySet="StudentEmployee" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ASPDatabaseFirstModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="ASPDatabaseFirstEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Designations" EntityType="ASPDatabaseFirstModel.Designation" />
+          <EntitySet Name="Employees" EntityType="ASPDatabaseFirstModel.Employee" />
+          <EntitySet Name="People" EntityType="ASPDatabaseFirstModel.Person" />
+          <EntitySet Name="Students" EntityType="ASPDatabaseFirstModel.Student" />
+          <EntitySet Name="StudentEmployees" EntityType="ASPDatabaseFirstModel.StudentEmployee" />
+          <AssociationSet Name="FK_Employee_Designation" Association="ASPDatabaseFirstModel.FK_Employee_Designation">
+            <End Role="Designation" EntitySet="Designations" />
+            <End Role="Employee" EntitySet="Employees" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_Person" Association="ASPDatabaseFirstModel.FK_Employee_Person">
+            <End Role="Person" EntitySet="People" />
+            <End Role="Employee" EntitySet="Employees" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudentEmployee_Employee" Association="ASPDatabaseFirstModel.FK_StudentEmployee_Employee">
+            <End Role="Employee" EntitySet="Employees" />
+            <End Role="StudentEmployee" EntitySet="StudentEmployees" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Student_Person" Association="ASPDatabaseFirstModel.FK_Student_Person">
+            <End Role="Person" EntitySet="People" />
+            <End Role="Student" EntitySet="Students" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudentEmployee_Student" Association="ASPDatabaseFirstModel.FK_StudentEmployee_Student">
+            <End Role="Student" EntitySet="Students" />
+            <End Role="StudentEmployee" EntitySet="StudentEmployees" />
+          </AssociationSet>
+          <EntitySet Name="ViewEmployees" EntityType="ASPDatabaseFirstModel.ViewEmployee" />
+          <EntitySet Name="NewTables" EntityType="ASPDatabaseFirstModel.NewTable" />
+          <AssociationSet Name="FK_NewTable_Employee" Association="ASPDatabaseFirstModel.FK_NewTable_Employee">
+            <End Role="Employee" EntitySet="Employees" />
+            <End Role="NewTable" EntitySet="NewTables" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NewTable_Person" Association="ASPDatabaseFirstModel.FK_NewTable_Person">
+            <End Role="Person" EntitySet="People" />
+            <End Role="NewTable" EntitySet="NewTables" />
+          </AssociationSet>
+          <FunctionImport Name="TestEmployeesViews" ReturnType="Collection(ASPDatabaseFirstModel.TestEmployeesViews_Result)">
+            <Parameter Name="SearchForEmployee" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <EntityType Name="Designation">
+          <Key>
+            <PropertyRef Name="DesignationID" />
+          </Key>
+          <Property Name="DesignationID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DesignationName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Salary" Type="Decimal" Nullable="false" Precision="14" Scale="4" />
+          <NavigationProperty Name="Employees" Relationship="ASPDatabaseFirstModel.FK_Employee_Designation" FromRole="Designation" ToRole="Employee" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Name="EmployeeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PersonID" Type="Int32" Nullable="false" />
+          <Property Name="DesignationID" Type="Byte" Nullable="false" />
+          <Property Name="IsAdmin" Type="Boolean" Nullable="false" />
+          <Property Name="IsTeachingAssistant" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Designation" Relationship="ASPDatabaseFirstModel.FK_Employee_Designation" FromRole="Employee" ToRole="Designation" />
+          <NavigationProperty Name="Person" Relationship="ASPDatabaseFirstModel.FK_Employee_Person" FromRole="Employee" ToRole="Person" />
+          <NavigationProperty Name="StudentEmployees" Relationship="ASPDatabaseFirstModel.FK_StudentEmployee_Employee" FromRole="Employee" ToRole="StudentEmployee" />
+          <NavigationProperty Name="NewTables" Relationship="ASPDatabaseFirstModel.FK_NewTable_Employee" FromRole="Employee" ToRole="NewTable" />
+        </EntityType>
+        <EntityType Name="Person">
+          <Key>
+            <PropertyRef Name="PersonID" />
+          </Key>
+          <Property Name="PersonID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="LastName" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="DateOfBirth" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="Employees" Relationship="ASPDatabaseFirstModel.FK_Employee_Person" FromRole="Person" ToRole="Employee" />
+          <NavigationProperty Name="Students" Relationship="ASPDatabaseFirstModel.FK_Student_Person" FromRole="Person" ToRole="Student" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="NewTables" Relationship="ASPDatabaseFirstModel.FK_NewTable_Person" FromRole="Person" ToRole="NewTable" />
+        </EntityType>
+        <EntityType Name="Student">
+          <Key>
+            <PropertyRef Name="StudentID" />
+          </Key>
+          <Property Name="StudentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PersonID" Type="Int32" Nullable="false" />
+          <Property Name="CGPA" Type="Double" Nullable="false" />
+          <NavigationProperty Name="Person" Relationship="ASPDatabaseFirstModel.FK_Student_Person" FromRole="Student" ToRole="Person" />
+          <NavigationProperty Name="StudentEmployees" Relationship="ASPDatabaseFirstModel.FK_StudentEmployee_Student" FromRole="Student" ToRole="StudentEmployee" />
+        </EntityType>
+        <EntityType Name="StudentEmployee">
+          <Key>
+            <PropertyRef Name="StudentEmployeeID" />
+          </Key>
+          <Property Name="StudentEmployeeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StudentID" Type="Int32" Nullable="false" />
+          <Property Name="EmployeeID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Employee" Relationship="ASPDatabaseFirstModel.FK_StudentEmployee_Employee" FromRole="StudentEmployee" ToRole="Employee" />
+          <NavigationProperty Name="Student" Relationship="ASPDatabaseFirstModel.FK_StudentEmployee_Student" FromRole="StudentEmployee" ToRole="Student" />
+        </EntityType>
+        <Association Name="FK_Employee_Designation">
+          <End Type="ASPDatabaseFirstModel.Designation" Role="Designation" Multiplicity="1" />
+          <End Type="ASPDatabaseFirstModel.Employee" Role="Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Designation">
+              <PropertyRef Name="DesignationID" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="DesignationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_Person">
+          <End Type="ASPDatabaseFirstModel.Person" Role="Person" Multiplicity="1" />
+          <End Type="ASPDatabaseFirstModel.Employee" Role="Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="PersonID" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="PersonID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudentEmployee_Employee">
+          <End Type="ASPDatabaseFirstModel.Employee" Role="Employee" Multiplicity="1" />
+          <End Type="ASPDatabaseFirstModel.StudentEmployee" Role="StudentEmployee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="StudentEmployee">
+              <PropertyRef Name="EmployeeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Student_Person">
+          <End Type="ASPDatabaseFirstModel.Person" Role="Person" Multiplicity="1" />
+          <End Type="ASPDatabaseFirstModel.Student" Role="Student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="PersonID" />
+            </Principal>
+            <Dependent Role="Student">
+              <PropertyRef Name="PersonID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudentEmployee_Student">
+          <End Type="ASPDatabaseFirstModel.Student" Role="Student" Multiplicity="1" />
+          <End Type="ASPDatabaseFirstModel.StudentEmployee" Role="StudentEmployee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="StudentID" />
+            </Principal>
+            <Dependent Role="StudentEmployee">
+              <PropertyRef Name="StudentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="ViewEmployee">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+            <PropertyRef Name="PersonID" />
+            <PropertyRef Name="DesignationID" />
+            <PropertyRef Name="IsAdmin" />
+            <PropertyRef Name="IsTeachingAssistant" />
+            <PropertyRef Name="LastName" />
+            <PropertyRef Name="FirstName" />
+            <PropertyRef Name="DateOfBirth" />
+            <PropertyRef Name="DesignationName" />
+            <PropertyRef Name="Salary" />
+          </Key>
+          <Property Name="EmployeeID" Type="Int32" Nullable="false" />
+          <Property Name="PersonID" Type="Int32" Nullable="false" />
+          <Property Name="DesignationID" Type="Byte" Nullable="false" />
+          <Property Name="IsAdmin" Type="Boolean" Nullable="false" />
+          <Property Name="IsTeachingAssistant" Type="Boolean" Nullable="false" />
+          <Property Name="LastName" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="DateOfBirth" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DesignationName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Salary" Type="Decimal" Nullable="false" Precision="14" Scale="4" />
+        </EntityType>
+        <EntityType Name="NewTable">
+          <Key>
+            <PropertyRef Name="NewTableID" />
+          </Key>
+          <Property Name="NewTableID" Type="Byte" Nullable="false" />
+          <Property Name="PersonID" Type="Int32" Nullable="false" />
+          <Property Name="EmployeeID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Employee" Relationship="ASPDatabaseFirstModel.FK_NewTable_Employee" FromRole="NewTable" ToRole="Employee" />
+          <NavigationProperty Name="Person" Relationship="ASPDatabaseFirstModel.FK_NewTable_Person" FromRole="NewTable" ToRole="Person" />
+        </EntityType>
+        <Association Name="FK_NewTable_Employee">
+          <End Type="ASPDatabaseFirstModel.Employee" Role="Employee" Multiplicity="1" />
+          <End Type="ASPDatabaseFirstModel.NewTable" Role="NewTable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="NewTable">
+              <PropertyRef Name="EmployeeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NewTable_Person">
+          <End Type="ASPDatabaseFirstModel.Person" Role="Person" Multiplicity="1" />
+          <End Type="ASPDatabaseFirstModel.NewTable" Role="NewTable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="PersonID" />
+            </Principal>
+            <Dependent Role="NewTable">
+              <PropertyRef Name="PersonID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <ComplexType Name="TestEmployeesViews_Result">
+          <Property Type="Int32" Name="EmployeeID" Nullable="false" />
+          <Property Type="Int32" Name="PersonID" Nullable="false" />
+          <Property Type="Byte" Name="DesignationID" Nullable="false" />
+          <Property Type="Boolean" Name="IsAdmin" Nullable="false" />
+          <Property Type="Boolean" Name="IsTeachingAssistant" Nullable="false" />
+          <Property Type="String" Name="LastName" Nullable="false" MaxLength="40" />
+          <Property Type="String" Name="FirstName" Nullable="false" MaxLength="30" />
+          <Property Type="DateTime" Name="DateOfBirth" Nullable="false" />
+          <Property Type="String" Name="Address" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="DesignationName" Nullable="false" MaxLength="50" />
+          <Property Type="Decimal" Name="Salary" Nullable="false" Precision="14" Scale="4" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ASPDatabaseFirstModelStoreContainer" CdmEntityContainer="ASPDatabaseFirstEntities">
+          <EntitySetMapping Name="Designations">
+            <EntityTypeMapping TypeName="ASPDatabaseFirstModel.Designation">
+              <MappingFragment StoreEntitySet="Designation">
+                <ScalarProperty Name="Salary" ColumnName="Salary" />
+                <ScalarProperty Name="DesignationName" ColumnName="DesignationName" />
+                <ScalarProperty Name="DesignationID" ColumnName="DesignationID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Employees">
+            <EntityTypeMapping TypeName="ASPDatabaseFirstModel.Employee">
+              <MappingFragment StoreEntitySet="Employee">
+                <ScalarProperty Name="IsTeachingAssistant" ColumnName="IsTeachingAssistant" />
+                <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
+                <ScalarProperty Name="DesignationID" ColumnName="DesignationID" />
+                <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="People">
+            <EntityTypeMapping TypeName="ASPDatabaseFirstModel.Person">
+              <MappingFragment StoreEntitySet="Person">
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Students">
+            <EntityTypeMapping TypeName="ASPDatabaseFirstModel.Student">
+              <MappingFragment StoreEntitySet="Student">
+                <ScalarProperty Name="CGPA" ColumnName="CGPA" />
+                <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+                <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StudentEmployees">
+            <EntityTypeMapping TypeName="ASPDatabaseFirstModel.StudentEmployee">
+              <MappingFragment StoreEntitySet="StudentEmployee">
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+                <ScalarProperty Name="StudentEmployeeID" ColumnName="StudentEmployeeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ViewEmployees">
+            <EntityTypeMapping TypeName="ASPDatabaseFirstModel.ViewEmployee">
+              <MappingFragment StoreEntitySet="ViewEmployee">
+                <ScalarProperty Name="Salary" ColumnName="Salary" />
+                <ScalarProperty Name="DesignationName" ColumnName="DesignationName" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="IsTeachingAssistant" ColumnName="IsTeachingAssistant" />
+                <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
+                <ScalarProperty Name="DesignationID" ColumnName="DesignationID" />
+                <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NewTables">
+            <EntityTypeMapping TypeName="ASPDatabaseFirstModel.NewTable">
+              <MappingFragment StoreEntitySet="NewTable">
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+                <ScalarProperty Name="NewTableID" ColumnName="NewTableID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="TestEmployeesViews" FunctionName="ASPDatabaseFirstModel.Store.TestEmployeesViews">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ASPDatabaseFirstModel.TestEmployeesViews_Result">
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+                <ScalarProperty Name="DesignationID" ColumnName="DesignationID" />
+                <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
+                <ScalarProperty Name="IsTeachingAssistant" ColumnName="IsTeachingAssistant" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="DesignationName" ColumnName="DesignationName" />
+                <ScalarProperty Name="Salary" ColumnName="Salary" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="ProcessDependentTemplatesOnSave" Value="False" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
